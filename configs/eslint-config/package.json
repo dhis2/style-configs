@@ -12,6 +12,7 @@
     "deploy": "d2-app-scripts deploy"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.7",
     "@dhis2/cli-app-scripts": "12.8.0-alpha.3",
     "@eslint/compat": "^2.0.0",
     "@eslint/eslintrc": "^3.3.1",
