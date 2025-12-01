@@ -14,7 +14,7 @@ env:
     GIT_COMMITTER_NAME: '@dhis2-bot'
     GIT_COMMITTER_EMAIL: 'apps@dhis2.org'
     NPM_TOKEN: ${{secrets.DHIS2_BOT_NPM_TOKEN}}
-    GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    GH_TOKEN: ${{secrets.DHIS2_BOT_GITHUB_TOKEN}}
     D2_VERBOSE: true
 
 jobs:
@@ -46,7 +46,7 @@ jobs:
           GITHUB_TOKEN: ${{ env.GH_TOKEN }}
           NPM_TOKEN: ${{ env.NPM_TOKEN }}
 
-      - name: Send a Slack notification if a publish happens
-        if: steps.changesets.outputs.published == 'true'
-        # You can do something when a publish happens.
-        run: my-slack-bot send-notification --message "A new version of ${GITHUB_REPOSITORY} was published!"
+      # - name: Send a Slack notification if a publish happens
+      #   if: steps.changesets.outputs.published == 'true'
+      #   # You can do something when a publish happens.
+      #   run: my-slack-bot send-notification --message "A new version of ${GITHUB_REPOSITORY} was published!"
