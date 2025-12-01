@@ -1,5 +1,11 @@
 # @dhis2/config-eslint
 
+## 0.1.0
+
+### Minor Changes
+
+- dae45cf: fix: apply unused-vars correctly
+
 ## 0.0.4
 
 ### Patch Changes
