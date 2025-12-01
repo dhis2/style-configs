@@ -10,20 +10,6 @@ export default defineConfig([
   { files: ["src/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"] },
 
   js.configs.recommended,
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [tseslint.configs.recommended],
-    rules: {
-      "import/extensions": "off",
-      "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": [
-        "error",
-        {
-          varsIgnorePattern: "^React",
-        },
-      ],
-    },
-  },
   eslintConfigPrettier,
   importPlugin.flatConfigs.errors,
   {
@@ -101,11 +87,27 @@ export default defineConfig([
       ],
     },
   },
+  {
+    files: ["**/*.{ts,tsx}"],
+    extends: [tseslint.configs.recommended],
+    rules: {
+      "import/extensions": "off",
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          varsIgnorePattern: "^React",
+        },
+      ],
+    },
+  },
   globalIgnores([
     ".d2/**/*",
     "build/**/*",
     "src/locales/**/*",
     "eslint.config*",
     "./*.js",
+    "global.d.ts",
+    "**/lcov-report/**/*"
   ]),
 ]);
