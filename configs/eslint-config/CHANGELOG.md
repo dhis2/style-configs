@@ -1,5 +1,11 @@
 # @dhis2/config-eslint
 
+## 0.0.3
+
+### Patch Changes
+
+- db6c952: chore: update GH_TOKEN
+
 ## 0.0.2
 
 ### Patch Changes
