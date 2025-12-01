@@ -15,6 +15,13 @@ export default defineConfig([
     extends: [tseslint.configs.recommended],
     rules: {
       "import/extensions": "off",
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          varsIgnorePattern: "^React",
+        },
+      ],
     },
   },
   eslintConfigPrettier,
@@ -86,7 +93,7 @@ export default defineConfig([
           varsIgnorePattern: "React",
         },
       ],
-      "@typescript-eslint/no-unused-vars": [
+      "no-unused-vars": [
         "error",
         {
           varsIgnorePattern: "^React",
