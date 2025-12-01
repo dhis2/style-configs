@@ -1,6 +1,6 @@
 {
   "name": "@dhis2/config-prettier",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "Shareable prettier config for DHIS2 organisation",
   "license": "BSD-3-Clause",
   "publishConfig": {
