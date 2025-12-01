@@ -8,10 +8,7 @@
   },
   "packageManager": "pnpm@10.13.1",
   "scripts": {
-    "build": "d2-app-scripts build",
-    "start": "d2-app-scripts start",
-    "test": "d2-app-scripts test",
-    "deploy": "d2-app-scripts deploy"
+    "build": "echo 'no build needed'"
   },
   "dependencies": {
     "@dhis2/cli-app-scripts": "12.8.0-alpha.3"
