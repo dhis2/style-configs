@@ -1,5 +1,11 @@
 # @dhis2/config-eslint
 
+## 0.0.4
+
+### Patch Changes
+
+- 8e79efd: fix: move linting packages to dependencies not devDependencies
+
 ## 0.0.3
 
 ### Patch Changes
