@@ -20,10 +20,6 @@ importers:
 
   configs/eslint-config:
     dependencies:
-      eslint:
-        specifier: '>= 9'
-        version: 9.39.1
-    devDependencies:
       '@changesets/cli':
         specifier: ^2.29.7
         version: 2.29.7(@types/node@24.10.1)
@@ -42,6 +38,9 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^8.48.0
         version: 8.48.0(eslint@9.39.1)(typescript@5.9.3)
+      eslint:
+        specifier: '>= 9'
+        version: 9.39.1
       eslint-config-prettier:
         specifier: ^10.1.8
         version: 10.1.8(eslint@9.39.1)
