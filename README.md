@@ -4,6 +4,8 @@ A monorepo for different libaries and configs that are used by the app platform.
 
 ## Dev notes
 
+This is built as a monorepo.
+
 This repo uses [changesets](https://github.com/changesets/changesets) to manage versioning and changelogs.
 
 - To prepare a changeset using conventional commits, run: `pnpm changeset-conventional`.
