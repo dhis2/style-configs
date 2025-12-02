@@ -1,20 +1,14 @@
 {
   "name": "@dhis2/config-prettier",
   "version": "0.2.1",
+  "type": "module",
   "description": "Shareable prettier config for DHIS2 organisation",
   "license": "BSD-3-Clause",
   "publishConfig": {
     "access": "public"
   },
   "packageManager": "pnpm@10.13.1",
-  "scripts": {
-    "build": "echo 'no build needed'"
-  },
-  "dependencies": {
-    "@dhis2/cli-app-scripts": "12.8.0-alpha.3"
-  },
-  "type": "module",
-  "exports": "./index.js",
+  "exports": "./src/index.js",
   "peerDependencies": {
     "prettier": ">=3.0.0"
   }

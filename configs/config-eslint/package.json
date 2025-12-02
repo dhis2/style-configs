@@ -1,21 +1,14 @@
 {
   "name": "@dhis2/config-eslint",
-  "version": "0.2.1",
-  "description": "",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Shareable eslint config for DHIS2 organisation",
   "license": "BSD-3-Clause",
   "publishConfig": {
     "access": "public"
   },
   "packageManager": "pnpm@10.13.1",
-  "scripts": {
-    "build": "d2-app-scripts build",
-    "start": "d2-app-scripts start",
-    "test": "d2-app-scripts test",
-    "deploy": "d2-app-scripts deploy"
-  },
   "dependencies": {
-    "@changesets/cli": "^2.29.7",
-    "@dhis2/cli-app-scripts": "12.8.0-alpha.3",
     "@eslint/compat": "^2.0.0",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.39.1",
@@ -31,19 +24,12 @@
   "peerDependencies": {
     "eslint": ">= 9"
   },
-  "files": [
-    "/build/**"
-  ],
-  "main": "./build/cjs/index.mjs",
-  "module": "./build/es/index.mjs",
   "exports": {
     ".": {
-      "import": "./build/es/index.mjs",
-      "require": "./build/cjs/index.mjs"
+      "import": "./src/index.js"
     },
     "./react": {
-      "import": "./build/es/react.mjs",
-      "require": "./build/cjs/react.mjs"
+      "import": "./src/react.js"
     }
   }
 }
