@@ -4,11 +4,20 @@ A monorepo for different libaries and configs that are used by the app platform.
 
 ## Dev notes
 
-This is built as a monorepo.
-
 This repo uses [changesets](https://github.com/changesets/changesets) to manage versioning and changelogs.
 
-- To prepare a changeset using conventional commits, run: `pnpm changeset-conventional`.
+To prepare a changeset based on the conventional commits, similar to our previous semantic-release workflow, run: `pnpm changeset-conventional`.
+
+If you open a PR that doesn't contain a changeset, the CI run will fail with this message:
+
+```
+Run pnpm changeset status --since=origin/main
+🦋  error Some packages have been changed but no changesets were found. Run `changeset add` to resolve this error.
+🦋  error If this change doesn't need a release, run `changeset add --empty`.
+Error: Process completed with exit code 1.
+```
+
+As suggested, if the change doesn't need a release, then you can run `changeset add --empty` to generate an empty changeset.
 
 ## Configs
 

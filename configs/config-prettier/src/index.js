@@ -20,4 +20,4 @@ const config = {
     embeddedLanguageFormatting: 'auto',
 }
 
-export default config;
+export default config
