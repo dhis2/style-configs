@@ -1,5 +1,12 @@
 # @dhis2/config-eslint
 
+## 0.2.2
+
+### Patch Changes
+
+- c7756ff: chore: remove build steps
+- c7756ff: chore: setup linting for the monorepo
+
 ## 0.2.1
 
 ## 0.2.0

@@ -1,5 +1,12 @@
 # @dhis2/config-prettier
 
+## 0.2.2
+
+### Patch Changes
+
+- c7756ff: chore: remove build steps
+- c7756ff: chore: setup linting for the monorepo
+
 ## 0.2.1
 
 ### Patch Changes
