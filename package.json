@@ -1,12 +1,25 @@
 {
-  "scripts": {
-    "release": "pnpm changeset publish"
-  },
-  "packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad",
-  "devDependencies": {
-    "@changesets/cli": "^2.29.7",
-    "@dhis2/config-eslint": "workspace:*",
-    "@dhis2/config-prettier": "workspace:*",
-    "changeset-conventional-commits": "^0.2.5"
-  }
+    "scripts": {
+        "release": "pnpm changeset publish",
+        "prepare": "husky",
+        "lint": "eslint && prettier -c ."
+    },
+    "packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad",
+    "devDependencies": {
+        "@changesets/cli": "^2.29.7",
+        "@dhis2/config-eslint": "workspace:*",
+        "@dhis2/config-prettier": "workspace:*",
+        "@eslint/compat": "^2.0.0",
+        "changeset-conventional-commits": "^0.2.5",
+        "eslint": "^9.39.1",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.2.7",
+        "prettier": "^3.7.3"
+    },
+    "lint-staged": {
+        "*": [
+            "pnpm prettier . --write",
+            "pnpm lint"
+        ]
+    }
 }

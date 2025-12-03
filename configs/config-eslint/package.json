@@ -1,35 +1,35 @@
 {
-  "name": "@dhis2/config-eslint",
-  "version": "0.1.0",
-  "type": "module",
-  "description": "Shareable eslint config for DHIS2 organisation",
-  "license": "BSD-3-Clause",
-  "publishConfig": {
-    "access": "public"
-  },
-  "packageManager": "pnpm@10.13.1",
-  "dependencies": {
-    "@eslint/compat": "^2.0.0",
-    "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.39.1",
-    "@typescript-eslint/parser": "^8.48.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "globals": "^16.5.0",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.48.0"
-  },
-  "peerDependencies": {
-    "eslint": ">= 9"
-  },
-  "exports": {
-    ".": {
-      "import": "./src/index.js"
+    "name": "@dhis2/config-eslint",
+    "version": "0.1.0",
+    "type": "module",
+    "description": "Shareable eslint config for DHIS2 organisation",
+    "license": "BSD-3-Clause",
+    "publishConfig": {
+        "access": "public"
     },
-    "./react": {
-      "import": "./src/react.js"
+    "packageManager": "pnpm@10.13.1",
+    "dependencies": {
+        "@eslint/compat": "^2.0.0",
+        "@eslint/eslintrc": "^3.3.1",
+        "@eslint/js": "^9.39.1",
+        "@typescript-eslint/parser": "^8.48.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-import": "^2.32.0",
+        "eslint-plugin-react": "^7.37.5",
+        "eslint-plugin-react-hooks": "^7.0.1",
+        "globals": "^16.5.0",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.48.0"
+    },
+    "peerDependencies": {
+        "eslint": ">= 9"
+    },
+    "exports": {
+        ".": {
+            "import": "./src/index.js"
+        },
+        "./react": {
+            "import": "./src/react.js"
+        }
     }
-  }
 }

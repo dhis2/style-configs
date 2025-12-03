@@ -1,15 +1,15 @@
 {
-  "name": "@dhis2/config-prettier",
-  "version": "0.2.1",
-  "type": "module",
-  "description": "Shareable prettier config for DHIS2 organisation",
-  "license": "BSD-3-Clause",
-  "publishConfig": {
-    "access": "public"
-  },
-  "packageManager": "pnpm@10.13.1",
-  "exports": "./src/index.js",
-  "peerDependencies": {
-    "prettier": ">=3.0.0"
-  }
+    "name": "@dhis2/config-prettier",
+    "version": "0.2.1",
+    "type": "module",
+    "description": "Shareable prettier config for DHIS2 organisation",
+    "license": "BSD-3-Clause",
+    "publishConfig": {
+        "access": "public"
+    },
+    "packageManager": "pnpm@10.13.1",
+    "exports": "./src/index.js",
+    "peerDependencies": {
+        "prettier": ">=3.0.0"
+    }
 }

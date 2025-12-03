@@ -1,0 +1,34 @@
+name: verify
+
+on:
+    push:
+    pull_request:
+        types: ['opened', 'edited', 'reopened', 'labeled']
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+    verify:
+        name: Verify
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
+
+            - uses: pnpm/action-setup@v4
+            - name: Setup Node.js 20.x
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 20.x
+                  cache: pnpm
+
+            - name: Install Dependencies
+              run: pnpm install
+
+            - name: Lint
+              run: pnpm lint
+
+            - name: Check changesets added
+              run: pnpm changeset status --since=origin/main
