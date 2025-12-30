@@ -4,6 +4,7 @@ on:
     push:
         branches:
             - main
+            - alpha
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -41,6 +42,7 @@ jobs:
                   # This expects you to have a script called release which does a build for your packages and calls changeset publish
                   publish: pnpm release
                   title: 'chore: version packages'
+                  commit: 'chore: version packages'
               env:
                   GITHUB_TOKEN: ${{ env.GH_TOKEN }}
                   NPM_TOKEN: ${{ env.NPM_TOKEN }}

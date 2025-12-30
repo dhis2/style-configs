@@ -1,0 +1,9 @@
+{
+    "mode": "pre",
+    "tag": "alpha",
+    "initialVersions": {
+        "@dhis2/config-eslint": "0.2.2",
+        "@dhis2/config-prettier": "0.2.2"
+    },
+    "changesets": []
+}
