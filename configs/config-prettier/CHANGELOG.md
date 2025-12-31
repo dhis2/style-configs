@@ -1,5 +1,11 @@
 # @dhis2/config-prettier
 
+## 0.2.3-alpha.0
+
+### Patch Changes
+
+- 0f19dac: chore: publish to alpha
+
 ## 0.2.2
 
 ### Patch Changes
