@@ -1,5 +1,7 @@
 # @dhis2/config-prettier
 
+## 0.2.3-alpha.0
+
 ## 0.2.2
 
 ### Patch Changes
