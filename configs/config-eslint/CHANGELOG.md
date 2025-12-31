@@ -1,5 +1,11 @@
 # @dhis2/config-eslint
 
+## 0.2.3
+
+### Patch Changes
+
+- 9450332: test: prerelease
+
 ## 0.2.2
 
 ### Patch Changes

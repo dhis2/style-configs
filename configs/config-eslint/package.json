@@ -1,6 +1,6 @@
 {
     "name": "@dhis2/config-eslint",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "type": "module",
     "description": "Shareable eslint config for DHIS2 organisation",
     "license": "BSD-3-Clause",
