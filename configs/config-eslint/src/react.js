@@ -1,12 +1,11 @@
+import eslintReact from '@eslint-react/eslint-plugin'
 import { defineConfig } from 'eslint/config'
-import pluginReact from 'eslint-plugin-react'
 import pluginReactHook from 'eslint-plugin-react-hooks'
 import baseConfig from './index.js'
 
 export default defineConfig([
     baseConfig,
-    pluginReact.configs.flat.recommended,
-    pluginReact.configs.flat['jsx-runtime'],
+    eslintReact.configs.recommended,
     pluginReactHook.configs.flat.recommended,
     {
         rules: {
@@ -14,16 +13,7 @@ export default defineConfig([
             'react-hooks/set-state-in-effect': 'off',
             'react-hooks/rules-of-hooks': 'error',
             'react-hooks/exhaustive-deps': 'warn',
-            'react/sort-prop-types': [
-                'error',
-                {
-                    requiredFirst: true,
-                    sortShapeProp: true,
-                    callbacksLast: true,
-                },
-            ],
-            'react/no-unused-prop-types': 'error',
-            'react/no-object-type-as-default-prop': 'error',
+            '@eslint-react/no-unstable-default-props': 'error',
         },
     },
 ])

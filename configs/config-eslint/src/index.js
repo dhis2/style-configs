@@ -2,7 +2,7 @@ import js from '@eslint/js'
 import tsParser from '@typescript-eslint/parser'
 import { defineConfig, globalIgnores } from 'eslint/config'
 import eslintConfigPrettier from 'eslint-config-prettier/flat'
-import importPlugin from 'eslint-plugin-import'
+import { flatConfigs as importFlatConfigs } from 'eslint-plugin-import-x'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
@@ -11,7 +11,7 @@ export default defineConfig([
 
     js.configs.recommended,
     eslintConfigPrettier,
-    importPlugin.flatConfigs.recommended,
+    importFlatConfigs.recommended,
     {
         languageOptions: {
             globals: {
@@ -36,7 +36,7 @@ export default defineConfig([
             // Prevents "error: unable to resolve module X" for .jsx files
             // if .jsx extension isn't used, e.g.
             // `import Component from './component'`
-            'import/resolver': {
+            'import-x/resolver': {
                 node: { extensions: ['.js', '.mjs', '.jsx', '.ts', '.tsx'] },
             },
         },
@@ -60,7 +60,7 @@ export default defineConfig([
 
             'no-mixed-spaces-and-tabs': ['error'],
 
-            'import/order': [
+            'import-x/order': [
                 'error',
                 {
                     'newlines-between': 'never',
@@ -73,7 +73,7 @@ export default defineConfig([
             ],
 
             // turning this rule off until this issue is resolved: https://github.com/import-js/eslint-plugin-import/issues/2703#issuecomment-1421307722
-            'import/no-unresolved': 'off',
+            'import-x/no-unresolved': 'off',
 
             curly: ['error'],
             'no-unused-vars': [
@@ -88,7 +88,7 @@ export default defineConfig([
         files: ['**/*.{ts,tsx}'],
         extends: [tseslint.configs.recommended],
         rules: {
-            'import/extensions': 'off',
+            'import-x/extensions': 'off',
             'no-unused-vars': 'off',
             '@typescript-eslint/no-unused-vars': [
                 'error',
