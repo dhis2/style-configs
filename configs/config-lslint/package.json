@@ -1,0 +1,14 @@
+{
+    "name": "@dhis2/config-lslint",
+    "version": "0.2.2",
+    "description": "Shareable ls-lint config for DHIS2 organisation",
+    "license": "BSD-3-Clause",
+    "publishConfig": {
+        "access": "public"
+    },
+    "packageManager": "pnpm@10.13.1",
+    "peerDependencies": {
+        "@ls-lint/ls-lint": ">=2.0.0"
+    },
+    "exports": "./src/ls-lint.yml"
+}

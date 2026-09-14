@@ -1,0 +1,23 @@
+/**
+ * Mirrors the rules @dhis2/cli-style's bundled commitlint config used, so
+ * migrating off cli-style doesn't change what counts as a valid commit
+ * message.
+ */
+const config = {
+    extends: ['@commitlint/config-conventional'],
+    rules: {
+        'header-max-length': [2, 'always', 120],
+        'body-max-line-length': [1, 'always', 100],
+    },
+    /*
+     * Ignore commits that don't contribute to a release. Release commits
+     * often exceed the max. amount of characters because of the appended
+     * changelog. This ignores those commits.
+     */
+    ignores: [
+        (commit) =>
+            commit.includes('[skip release]') || commit.includes('[skip ci]'),
+    ],
+}
+
+export default config
