@@ -10,11 +10,11 @@ These are shareable configs for linting and style formatting. They provide a [mo
 
 - `configs/prettier-config`: publishes a shareable prettier config to `@dhis2/config-prettier`
 
-- `configs/lslint-config` (in progress)
+- `configs/config-lslint`: publishes a shareable ls-lint ruleset to `@dhis2/config-lslint`, matching `cli-style`'s bundled config. `ls-lint` has no `extends` mechanism, so this is a versioned file to copy into your project's `.ls-lint.yml` rather than something you import — see that package's README.
 
-- `configs/commitlint-config` (in progress)
+- `configs/config-commitlint`: publishes a shareable commitlint config to `@dhis2/config-commitlint`, matching the rules `cli-style`'s bundled commitlint config used (extends `@commitlint/config-conventional`, with the same `header-max-length`/`body-max-line-length` overrides and release-commit exceptions)
 
-- `configs/stylelint-config` (in progress)
+- `configs/config-stylelint`: publishes a shareable stylelint config to `@dhis2/config-stylelint`, matching the rules `cli-style`'s bundled config used (enforces logical CSS properties via `stylelint-use-logical`, with a `postcss-styled-jsx` override for CSS embedded in `<style jsx>` blocks)
 
 These, once the configs that are in-progress are implemented, should eventually replace `cli-style` (more context in [this ticket](https://dhis2.atlassian.net/browse/LIBS-614)).
 
