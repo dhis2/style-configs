@@ -1,5 +1,11 @@
 # @dhis2/config-eslint
 
+## 0.3.0
+
+### Patch Changes
+
+- 0f19dac: chore: publish to alpha
+
 ## 0.3.0-alpha.0
 
 ### Patch Changes
