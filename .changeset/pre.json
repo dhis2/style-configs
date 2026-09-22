@@ -1,0 +1,12 @@
+{
+    "mode": "exit",
+    "tag": "alpha",
+    "initialVersions": {
+        "@dhis2/config-eslint": "0.2.2",
+        "@dhis2/config-prettier": "0.2.2",
+        "@dhis2/config-commitlint": "0.2.2",
+        "@dhis2/config-lslint": "0.2.2",
+        "@dhis2/config-stylelint": "0.2.2"
+    },
+    "changesets": ["loud-hounds-jump", "shy-trams-nail", "tame-otters-dance"]
+}

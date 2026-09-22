@@ -1,0 +1,10 @@
+# Project-specific ls-lint rules for this monorepo, layered on top of the shared
+# @dhis2/config-lslint ruleset (configs/config-lslint/src/ls-lint.yml) referenced in the root
+# "lint" script. See configs/config-lslint/README.md for how composing shared + local rules
+# works.
+ls: {}
+
+ignore:
+    # Untracked local sandbox app for manually trying out the configs (see .gitignore) --
+    # not part of the published packages, so its own file naming isn't this repo's concern.
+    - example
