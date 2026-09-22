@@ -19,12 +19,18 @@ importers:
             '@dhis2/config-eslint':
                 specifier: workspace:*
                 version: link:configs/config-eslint
+            '@dhis2/config-lslint':
+                specifier: workspace:*
+                version: link:configs/config-lslint
             '@dhis2/config-prettier':
                 specifier: workspace:*
                 version: link:configs/config-prettier
             '@eslint/compat':
                 specifier: ^2.0.0
                 version: 2.0.0(eslint@9.39.1(jiti@2.6.1))
+            '@ls-lint/ls-lint':
+                specifier: ^2.3.1
+                version: 2.3.1
             changeset-conventional-commits:
                 specifier: ^0.2.5
                 version: 0.2.5

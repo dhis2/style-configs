@@ -6,15 +6,15 @@ A monorepo for different libaries and configs that are used by the app platform.
 
 These are shareable configs for linting and style formatting. They provide a [modern standard way](https://eslint.org/docs/latest/extend/shareable-configs) of sharing such configs, other than encapsulating them in a library (like we did previously with `cli-style`).
 
-- `configs/eslint-config`: publishes a shareable eslint config to `@dhis2/config-eslint` (and `@dhis2/config-eslint/react`)
+- [`configs/config-eslint`](configs/config-eslint/README.md): publishes a shareable eslint config to `@dhis2/config-eslint` (and `@dhis2/config-eslint/react`)
 
-- `configs/prettier-config`: publishes a shareable prettier config to `@dhis2/config-prettier`
+- [`configs/config-prettier`](configs/config-prettier/README.md): publishes a shareable prettier config to `@dhis2/config-prettier`
 
-- `configs/config-lslint`: publishes a shareable ls-lint ruleset to `@dhis2/config-lslint`, matching `cli-style`'s bundled config. `ls-lint` has no `extends` mechanism, so this is a versioned file to copy into your project's `.ls-lint.yml` rather than something you import — see that package's README.
+- [`configs/config-lslint`](configs/config-lslint/README.md): publishes a shareable ls-lint ruleset to `@dhis2/config-lslint`. `ls-lint` has no `extends` mechanism, so rather than importing it, you reference it directly on the CLI alongside your own `.ls-lint.yml` via `ls-lint`'s multi-`--config` support — see that package's README for the exact setup and how to layer project-local rules on top.
 
-- `configs/config-commitlint`: publishes a shareable commitlint config to `@dhis2/config-commitlint`, matching the rules `cli-style`'s bundled commitlint config used (extends `@commitlint/config-conventional`, with the same `header-max-length`/`body-max-line-length` overrides and release-commit exceptions)
+- [`configs/config-commitlint`](configs/config-commitlint/README.md): publishes a shareable commitlint config to `@dhis2/config-commitlint`, matching the rules `cli-style`'s bundled commitlint config used (extends `@commitlint/config-conventional`, with the same `header-max-length`/`body-max-line-length` overrides and release-commit exceptions)
 
-- `configs/config-stylelint`: publishes a shareable stylelint config to `@dhis2/config-stylelint`, matching the rules `cli-style`'s bundled config used (enforces logical CSS properties via `stylelint-use-logical`, with a `postcss-styled-jsx` override for CSS embedded in `<style jsx>` blocks)
+- [`configs/config-stylelint`](configs/config-stylelint/README.md): publishes a shareable stylelint config to `@dhis2/config-stylelint`, matching the rules `cli-style`'s bundled config used (enforces logical CSS properties via `stylelint-use-logical`, with a `postcss-styled-jsx` override for CSS embedded in `<style jsx>` blocks)
 
 These, once the configs that are in-progress are implemented, should eventually replace `cli-style` (more context in [this ticket](https://dhis2.atlassian.net/browse/LIBS-614)).
 
@@ -55,7 +55,7 @@ curl -s https://raw.githubusercontent.com/dhis2/style-configs/refs/heads/main/co
 ```
 
 > [!IMPORTANT]  
-> This is a very _crude_ script: it deletes existing configs (for eslint and prettier) and replaces them with the new format using the shared configs. Once you run the script, you **should** test that everything works as expected, and pay special attention if you had custom linting rules as these will need to be re-added manually. In general, this is straight-forward for _prettier_, but might involve some slight changes in _eslint_ as the cli-style used an outdated [config file format](https://eslint.org/blog/2022/08/new-config-system-part-2/).
+> This is a very _crude_ script: it deletes existing configs (for eslint and prettier) and replaces them with the new format using the shared configs, and also wires up `@dhis2/config-stylelint`, `@dhis2/config-commitlint` (with a `.husky/commit-msg` hook), and `@dhis2/config-lslint` (a starter `.ls-lint.yml` referencing the shared ruleset via `ls-lint`'s multi-`--config` support — see that package's README). Once you run the script, you **should** test that everything works as expected, and pay special attention if you had custom linting rules as these will need to be re-added manually. In general, this is straight-forward for _prettier_, but might involve some slight changes in _eslint_ as the cli-style used an outdated [config file format](https://eslint.org/blog/2022/08/new-config-system-part-2/). Also double-check the ls-lint directories match your project's actual layout — the shared config only scopes to `src`/`cypress`/`scripts`/`types`/`lib`/`test`/`tests`/`e2e`.
 
 > [!CAUTION]  
 > The script currently does not update the CI workflow. There are too many variations of those to try and automate the process. It does add a `lint` script to `pakcage.json` so it should be easy to run the linting step by doing `pnpm lint` (or `yarn lint`).

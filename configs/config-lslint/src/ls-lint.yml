@@ -1,11 +1,48 @@
 ls:
-    ./**/{src,cypress,lib}:
-        .dir: kebab-case
-
-    ./**/node_modules:
-        .dir: regex:.*
+    '**/{src,cypress,scripts,types,lib,test,tests,e2e}':
+        .dir: kebab-case | regex:__tests__
+        .css: kebab-case
+        .module.css: kebab-case
+        .feature: kebab-case
+        .js: kebab-case
+        .jsx: kebab-case
+        .ts: kebab-case
+        .tsx: kebab-case
+        .d.ts: kebab-case
+        .spec.js: kebab-case
+        .spec.jsx: kebab-case
+        .spec.ts: kebab-case
+        .spec.tsx: kebab-case
+        .test.js: kebab-case
+        .test.jsx: kebab-case
+        .test.ts: kebab-case
+        .test.tsx: kebab-case
+        .stories.js: kebab-case
+        .stories.jsx: kebab-case
+        .stories.ts: kebab-case
+        .stories.tsx: kebab-case
+        .stories.e2e.js: kebab-case
+        .styles.js: kebab-case
+        .styles.ts: kebab-case
+        .cy.js: kebab-case
+        .cy.jsx: kebab-case
+        .cy.ts: kebab-case
+        .cy.tsx: kebab-case
+        .json: kebab-case
+        .yml: kebab-case
 
 ignore:
-    - node_modules
-    - .d2
-    - build
+    - '**/.git'
+    - '**/node_modules'
+    - '**/.d2'
+    - '**/build'
+    - '**/dist'
+    - '**/coverage'
+    - '**/locales'
+    - '**/i18n'
+    - '**/cypress/screenshots'
+    - '**/cypress/downloads'
+    - '**/cypress/fixtures'
+    - '**/__mocks__'
+    - '**/__snapshots__'
+    - '**/__fixtures__'
