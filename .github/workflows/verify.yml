@@ -31,5 +31,5 @@ jobs:
               run: pnpm lint
 
             - name: Check changesets added
-              if: ${{ github.event.pull_request.base.ref != '' }}
+              if: ${{ github.event.pull_request.base.ref != '' && !startsWith(github.event.pull_request.head.ref, 'changeset-release/') }}
               run: pnpm changeset status --since=origin/${{ github.event.pull_request.base.ref }}
