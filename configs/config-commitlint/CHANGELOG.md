@@ -1,5 +1,11 @@
 # @dhis2/config-commitlint
 
+## 0.4.0
+
+### Minor Changes
+
+- dc3924e: bump all versions after adding new packages
+
 ## 0.3.0
 
 ### Minor Changes

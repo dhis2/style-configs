@@ -1,6 +1,6 @@
 {
     "name": "@dhis2/config-commitlint",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "type": "module",
     "description": "Shareable commitlint config for DHIS2 organisation",
     "license": "BSD-3-Clause",
